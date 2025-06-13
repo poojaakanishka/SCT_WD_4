@@ -1,0 +1,85 @@
+/* ---- Reset & Base ---- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #121212;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* ---- Wrapper ---- */
+.container {
+  background: #1e1e2f;
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* ---- Headings ---- */
+h1 { text-align: center; margin-bottom: 1.5rem; color: #00e5ff; }
+
+/* ---- Form ---- */
+#todo-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+#todo-form input[type="text"],
+#todo-form input[type="datetime-local"] {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: #2a2a40;
+  color: #fff;
+}
+#todo-form button {
+  background: #00e5ff;
+  border: none;
+  padding: 0 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+#todo-form button:hover { background: #00bcd4; }
+
+/* ---- Task List ---- */
+#task-list { list-style: none; }
+.task {
+  background: #24243a;
+  margin-bottom: 0.7rem;
+  padding: 0.9rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+.task.completed { background: #2e402e; text-decoration: line-through; }
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.task-date { font-size: 0.75rem; color: #999; }
+
+/* ---- Buttons ---- */
+.task button {
+  background: transparent;
+  border: none;
+  color: #00e5ff;
+  cursor: pointer;
+  margin-left: 0.4rem;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.task button:hover { color: #ff5252; }
